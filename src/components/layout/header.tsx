@@ -13,13 +13,12 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
-  { href: 'https://drive.google.com/file/d/1yYt_iYAwDoIWxx1L7iarm4NrGUvAECU6/view?usp=sharing', label: 'Resume', isExternal: true },
+  { href: '/resume', label: 'Resume' },
   { href: '/contact', label: 'Contact' },
 ];
 
 export function Header() {
   const pathname = usePathname();
-  const resumeUrl = "https://drive.google.com/file/d/1yYt_iYAwDoIWxx1L7iarm4NrGUvAECU6/view?usp=sharing";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -32,33 +31,18 @@ export function Header() {
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks.map(({ href, label }) => {
-              if (label === 'Resume') {
-                return (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {label}
-                  </a>
-                );
-              }
-              return (
-                <Link
-                  key={label}
-                  href={href}
-                  className={cn(
-                    'transition-colors hover:text-primary',
-                    pathname === href ? 'text-primary' : 'text-muted-foreground'
-                  )}
-                >
-                  {label}
-                </Link>
-              );
-            })}
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={label}
+                href={href}
+                className={cn(
+                  'transition-colors hover:text-primary',
+                  pathname === href ? 'text-primary' : 'text-muted-foreground'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
         </div>
         
@@ -80,22 +64,7 @@ export function Header() {
                         </Link>
                     </div>
                     <nav className="flex flex-col space-y-4 mt-6">
-                        {navLinks.map(({ href, label }) => {
-                          if (label === 'Resume') {
-                            return (
-                               <SheetClose asChild key={label}>
-                                <a
-                                  href={href}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-lg text-muted-foreground"
-                                >
-                                  {label}
-                                </a>
-                              </SheetClose>
-                            )
-                          }
-                          return (
+                        {navLinks.map(({ href, label }) => (
                             <SheetClose asChild key={label}>
                                 <Link
                                     href={href}
@@ -107,8 +76,7 @@ export function Header() {
                                     {label}
                                 </Link>
                             </SheetClose>
-                          )
-                        })}
+                        ))}
                     </nav>
                 </div>
             </SheetContent>
