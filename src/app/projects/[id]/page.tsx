@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { projects } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 type ProjectPageProps = {
   params: {
@@ -26,13 +26,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const hasLiveDemo = project.id === 'store-performance-forecast' || project.id === 'telco-customer-churn';
-  const liveDemoUrl = project.id === 'store-performance-forecast' 
-    ? 'https://teja8978544942-store-site-app-kumlnu.streamlit.app/' 
-    : project.id === 'telco-customer-churn' 
-    ? 'https://teja8978544942-telco-churn-app-frpeqs.streamlit.app/'
+  const hasLiveDemo = project.id === 'store-performance-forecast';
+  const liveDemoUrl = 'https://teja8978544942-store-site-app-kumlnu.streamlit.app/';
+  const githubUrl = project.id === 'telco-customer-churn' 
+    ? 'https://github.com/teja8978544942/telco-customer-churn-analysis'
     : '';
-
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -80,6 +78,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     <Button variant="outline" asChild>
                         <Link href={liveDemoUrl} target="_blank">
                             View Live Demo <ExternalLink className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
+                )}
+                 {project.id === 'telco-customer-churn' && (
+                    <Button variant="outline" asChild>
+                        <Link href={githubUrl} target="_blank">
+                            View on GitHub <Github className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
                 )}
