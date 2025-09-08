@@ -15,9 +15,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-2 tracking-tight">
             Tejeswar Nadisetti
           </h1>
+          <p className="text-2xl md:text-3xl font-medium text-primary-foreground/90 mb-4">
+            Data Analyst
+          </p>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/80 mb-8">
             Transforming data into actionable insights and strategic solutions.
           </p>
