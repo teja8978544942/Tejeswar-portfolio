@@ -28,8 +28,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   const hasLiveDemo = project.id === 'store-performance-forecast';
   const liveDemoUrl = 'https://teja8978544942-store-site-app-kumlnu.streamlit.app/';
-  const hasGithubLink = project.id === 'telco-customer-churn';
-  const githubUrl = 'https://github.com/teja8978544942/telco-customer-churn-analysis';
+  
+  const githubLinks: { [id: string]: string } = {
+    'telco-customer-churn': 'https://github.com/teja8978544942/telco-customer-churn-analysis',
+    'loan-default-prediction': 'https://github.com/teja8978544942/loan-default-prediction'
+  };
+
+  const hasGithubLink = Object.keys(githubLinks).includes(project.id);
+  const githubUrl = githubLinks[project.id];
 
 
   return (
