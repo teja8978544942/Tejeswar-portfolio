@@ -25,10 +25,10 @@ export default function Home() {
             className="rounded-full mx-auto mb-6 border-4 border-accent"
           />
           <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
-            DataDive Portfolio
+            Tejeswar Nadisetti
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/80 mb-8">
-            Leveraging data to uncover insights and drive business solutions. Welcome to my personal collection of data analysis projects.
+            A Data Analytics Portfolio. Leveraging data to uncover insights and drive business solutions.
           </p>
           <Button asChild size="lg">
             <Link href="/projects">
@@ -46,10 +46,10 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I'm a passionate data analyst with a knack for transforming complex datasets into actionable insights. My journey into data began with a curiosity for patterns and a drive to solve real-world problems.
+                  I'm a highly motivated and analytical undergraduate student pursuing a career in Data Analytics. I'm skilled in using Python, SQL, and data visualization tools to clean, analyze, and interpret complex datasets.
                 </p>
                 <p>
-                  With expertise in Python, SQL, and data visualization tools, I enjoy every stage of the data lifecycle—from cleaning and exploration to modeling and storytelling.
+                  I am eager to apply academic knowledge and project experience to uncover actionable insights and contribute to data-driven decision-making in a professional environment. A proactive learner with a strong foundation in statistical analysis.
                 </p>
               </div>
               <Button asChild variant="link" className="px-0 mt-4 text-base">

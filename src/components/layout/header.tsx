@@ -28,11 +28,13 @@ export function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block font-headline">
-              DataDive
+              Tejeswar
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks.map(({ href, label }) => (
+            {navLinks
+              .filter(link => link.href !== '/recommendations')
+              .map(({ href, label }) => (
               <Link
                 key={label}
                 href={href}
@@ -61,11 +63,13 @@ export function Header() {
                     <div className="flex items-center justify-between border-b pb-4">
                         <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
                             <Logo className="h-6 w-6 text-primary" />
-                            <span className="font-bold font-headline">DataDive</span>
+                            <span className="font-bold font-headline">Tejeswar</span>
                         </Link>
                     </div>
                     <nav className="flex flex-col space-y-4 mt-6">
-                        {navLinks.map(({ href, label }) => (
+                        {navLinks
+                          .filter(link => link.href !== '/recommendations')
+                          .map(({ href, label }) => (
                             <Link
                                 key={label}
                                 href={href}

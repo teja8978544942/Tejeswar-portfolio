@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, Award } from 'lucide-react';
 import type { ResumeEntry } from '@/lib/data';
 
 type ResumeTimelineProps = {
@@ -11,9 +11,11 @@ export default function ResumeTimeline({ items }: ResumeTimelineProps) {
       {items.map((item, index) => (
         <div key={index} className="relative">
           <div className="absolute -left-[35px] top-1.5 h-6 w-6 rounded-full bg-primary flex items-center justify-center">
-            {item.company.includes('University') || item.company.includes('State') ? 
+            {item.company.includes('University') || item.company.includes('School') || item.company.includes('College') ? 
                 <GraduationCap className="h-4 w-4 text-primary-foreground" /> :
-                <Briefcase className="h-4 w-4 text-primary-foreground" />
+                item.period.includes('Internship') ?
+                <Briefcase className="h-4 w-4 text-primary-foreground" /> :
+                <Award className="h-4 w-4 text-primary-foreground" />
             }
           </div>
           <p className="text-sm font-medium text-accent">{item.period}</p>

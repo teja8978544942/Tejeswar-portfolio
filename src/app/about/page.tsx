@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div className="md:col-span-2">
             <Image
               src="https://picsum.photos/500/600"
-              alt="Portrait of the analyst"
+              alt="Portrait of Tejeswar Nadisetti"
               data-ai-hint="professional portrait"
               width={500}
               height={600}
@@ -31,13 +31,13 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6">Who I Am</h2>
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                My name is Jane Doe, and I am a data analyst driven by a mission to turn raw data into strategic assets. My fascination with data science began during my computer science studies, where I discovered the power of algorithms to uncover hidden patterns in large datasets. This led me to pursue a Master's degree in Data Science, where I honed my skills in statistical analysis, machine learning, and data visualization.
+                My name is Tejeswar Nadisetti, and I am a highly motivated and analytical undergraduate student pursuing a career in Data Analytics. I am skilled in using Python, SQL, and data visualization tools to clean, analyze, and interpret complex datasets.
               </p>
               <p>
-                Professionally, I thrive in collaborative environments where I can work with cross-functional teams to tackle complex business problems. Whether it's optimizing marketing spend, forecasting sales, or improving operational efficiency, I am committed to delivering data-driven solutions that create tangible value.
+                I am eager to apply academic knowledge and project experience to uncover actionable insights and contribute to data-driven decision-making in a professional environment. As a proactive learner with a strong foundation in statistical analysis, I am seeking an opportunity to add value as a Data Analyst.
               </p>
               <p>
-                Outside of work, I'm an avid reader, a lifelong learner, and I enjoy contributing to open-source data science projects. I believe that continuous learning is key to staying sharp in this ever-evolving field.
+                Outside of my academic and professional pursuits, I'm an avid reader, a lifelong learner, and I enjoy exploring new technologies and contributing to open-source projects.
               </p>
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function AboutPage() {
         <h2 className="text-4xl font-bold text-center mb-12">Interactive Resume</h2>
         <div className="grid md:grid-cols-2 gap-12">
             <div>
-                <h3 className="text-2xl font-semibold mb-6">Work Experience</h3>
+                <h3 className="text-2xl font-semibold mb-6">Certifications & Internships</h3>
                 <ResumeTimeline items={resume} />
             </div>
             <div>

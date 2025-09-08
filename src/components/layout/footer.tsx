@@ -10,10 +10,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <Logo className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg font-headline">DataDive</span>
+            <span className="font-bold text-lg font-headline">Tejeswar</span>
           </div>
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} DataDive Portfolio. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Tejeswar Nadisetti. All Rights Reserved.
           </p>
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon" asChild>

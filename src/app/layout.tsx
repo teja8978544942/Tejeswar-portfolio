@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'DataDive Portfolio',
+  title: 'Tejeswar Nadisetti Portfolio',
   description: 'A personal portfolio for a data analyst, built with Next.js.',
 };
 

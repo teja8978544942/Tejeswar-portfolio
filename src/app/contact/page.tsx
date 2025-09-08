@@ -49,7 +49,7 @@ export default function ContactPage() {
       <div className="max-w-2xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle>Contact Form</CardTitle>
+            <CardTitle>Contact Me</CardTitle>
             <CardDescription>I'm looking forward to hearing from you.</CardDescription>
           </CardHeader>
           <CardContent>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     <FormItem>
                       <FormLabel>Your Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Jane Doe" {...field} />
+                        <Input placeholder="Your Name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     <FormItem>
                       <FormLabel>Your Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="jane.doe@example.com" {...field} />
+                        <Input placeholder="your.email@example.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
