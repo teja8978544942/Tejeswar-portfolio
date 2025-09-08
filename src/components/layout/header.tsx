@@ -2,12 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/icons';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -19,7 +18,6 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -32,8 +30,7 @@ export function Header() {
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
-            {navLinks
-              .map(({ href, label }) => (
+            {navLinks.map(({ href, label }) => (
               <Link
                 key={label}
                 href={href}
@@ -50,9 +47,9 @@ export function Header() {
         
         {/* Mobile Menu */}
         <div className="md:hidden">
-           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+           <Sheet>
             <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(true)}>
+                <Button variant="ghost" size="icon">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open Menu</span>
                 </Button>
@@ -60,25 +57,24 @@ export function Header() {
             <SheetContent side="left">
                 <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between border-b pb-4">
-                        <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Link href="/" className="flex items-center space-x-2">
                             <Logo className="h-6 w-6 text-primary" />
                             <span className="font-bold font-headline">Tejeswar</span>
                         </Link>
                     </div>
                     <nav className="flex flex-col space-y-4 mt-6">
-                        {navLinks
-                          .map(({ href, label }) => (
-                            <Link
-                                key={label}
-                                href={href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={cn(
-                                'text-lg',
-                                pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
-                                )}
-                            >
-                                {label}
-                            </Link>
+                        {navLinks.map(({ href, label }) => (
+                            <SheetClose asChild key={label}>
+                                <Link
+                                    href={href}
+                                    className={cn(
+                                    'text-lg',
+                                    pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                                    )}
+                                >
+                                    {label}
+                                </Link>
+                            </SheetClose>
                         ))}
                     </nav>
                 </div>
