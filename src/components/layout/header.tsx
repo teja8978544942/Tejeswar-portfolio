@@ -33,7 +33,6 @@ export function Header() {
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks
-              .filter(link => link.href !== '/recommendations')
               .map(({ href, label }) => (
               <Link
                 key={label}
@@ -68,7 +67,6 @@ export function Header() {
                     </div>
                     <nav className="flex flex-col space-y-4 mt-6">
                         {navLinks
-                          .filter(link => link.href !== '/recommendations')
                           .map(({ href, label }) => (
                             <Link
                                 key={label}
