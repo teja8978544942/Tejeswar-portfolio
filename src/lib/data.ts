@@ -127,6 +127,40 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 # plt.show()
 `
   },
+  {
+    id: 'loan-default-prediction',
+    title: 'Loan Default Prediction Analysis',
+    description: 'Built a machine learning model to predict loan default risk, helping to identify high-risk applicants through data analysis and predictive modeling.',
+    longDescription: `This project focuses on predicting loan default using a dataset of past loan applicants. The primary goal was to build a reliable classification model that can distinguish between applicants who are likely to repay a loan and those who are likely to default.
+
+The process involved comprehensive data cleaning, exploratory data analysis (EDA) to uncover insights into factors affecting loan status, and feature engineering to prepare the data for modeling. I experimented with several classification algorithms, including Logistic Regression and Random Forest, to find the best-performing model. The final model provides a valuable tool for assessing credit risk and making data-informed lending decisions.`,
+    imageUrl: 'https://picsum.photos/600/401',
+    imageHint: 'financial analytics',
+    tags: ['Python', 'Machine Learning', 'Scikit-learn', 'Data Analysis', 'Pandas'],
+    codeSnippet: `import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+# Load the dataset (assuming 'loan_data.csv' is available)
+# loans = pd.read_csv('loan_data.csv')
+
+# Preprocessing and Feature Engineering
+# ... (categorical feature conversion, etc.)
+
+# final_data = pd.get_dummies(loans, columns=cat_feats, drop_first=True)
+# X = final_data.drop('not.fully.paid', axis=1)
+# y = final_data['not.fully.paid']
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
+
+# Train a logistic regression model
+# logmodel = LogisticRegression()
+# logmodel.fit(X_train, y_train)
+
+# predictions = logmodel.predict(X_test)
+# print(classification_report(y_test, predictions))
+`
+  },
 ];
 
 export const blogPosts: BlogPost[] = [
