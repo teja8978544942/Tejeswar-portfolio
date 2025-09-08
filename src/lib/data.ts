@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Choosing the Right Chart for Your Data',
     description: 'A guide to selecting the most effective chart type to tell your data story.',
     author: 'Tejeswar Nadisetti',
-    date: '2025-03-14',
+    date: '2025-02-05',
     imageUrl: 'https://picsum.photos/800/451',
     imageHint: 'charts graphs',
     content: 'A great visualization can make complex data instantly understandable. But choosing the wrong chart can be confusing or even misleading. This guide covers some of the most common chart types and when to use them.\n\n- **Bar Charts:** Best for comparing categories.\n- **Line Charts:** Ideal for showing trends over time.\n- **Scatter Plots:** Used to show the relationship between two variables.\n- **Pie Charts:** Use sparingly, but effective for showing parts of a whole.\n- **Heatmaps:** Great for visualizing correlations or matrix data.',
