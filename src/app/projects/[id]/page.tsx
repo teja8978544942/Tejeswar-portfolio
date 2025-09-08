@@ -68,17 +68,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     <CardTitle className="text-lg">Churn by Contract Type</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Image src="https://picsum.photos/600/400" alt="Chart showing customer churn by contract type" width={600} height={400} className="rounded-md" data-ai-hint="bar chart" />
-                    <p className="text-sm text-muted-foreground mt-2">Customers on month-to-month contracts show a higher churn rate.</p>
+                    <Image src="https://i.imgur.com/kOfsV2I.png" alt="Chart showing customer churn by contract type" width={600} height={400} className="rounded-md" data-ai-hint="bar chart" />
+                    <p className="text-sm text-muted-foreground mt-2">Customers on month-to-month contracts have a churn rate of 42.7%, significantly higher than those on yearly contracts.</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Feature Importance</CardTitle>
+                    <CardTitle className="text-lg">Tenure Distribution by Churn Status</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Image src="https://picsum.photos/600/401" alt="Chart showing model feature importance" width={600} height={401} className="rounded-md" data-ai-hint="feature importance" />
-                    <p className="text-sm text-muted-foreground mt-2">The model identified contract type and tenure as the most predictive features.</p>
+                    <Image src="https://i.imgur.com/8pS1h7H.png" alt="Box plot showing tenure distribution by churn status" width={600} height={401} className="rounded-md" data-ai-hint="box plot" />
+                    <p className="text-sm text-muted-foreground mt-2">The analysis shows a clear trend: customers who churn typically have a much shorter tenure with the company.</p>
                   </CardContent>
                 </Card>
               </div>
