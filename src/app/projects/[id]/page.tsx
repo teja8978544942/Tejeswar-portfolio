@@ -26,6 +26,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
+  const hasLiveDemo = project.id === 'store-performance-forecast' || project.id === 'telco-customer-churn';
+  const liveDemoUrl = project.id === 'store-performance-forecast' 
+    ? 'https://teja8978544942-store-site-app-kumlnu.streamlit.app/' 
+    : project.id === 'telco-customer-churn' 
+    ? '#-your-live-demo-link-here' // Placeholder for when Telco demo is ready
+    : '';
+
+
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
@@ -80,9 +88,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mb-12">
              <div className="flex justify-between items-center mb-4">
                 <h2 className="text-3xl font-bold">Code Snippet</h2>
-                {project.id === 'telco-customer-churn' && (
+                {hasLiveDemo && (
                     <Button variant="outline" asChild>
-                        <Link href="#-your-live-demo-link-here" target="_blank">
+                        <Link href={liveDemoUrl} target="_blank">
                             View Live Demo <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
