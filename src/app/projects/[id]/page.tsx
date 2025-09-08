@@ -28,9 +28,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   const hasLiveDemo = project.id === 'store-performance-forecast';
   const liveDemoUrl = 'https://teja8978544942-store-site-app-kumlnu.streamlit.app/';
-  const githubUrl = project.id === 'telco-customer-churn' 
-    ? 'https://github.com/teja8978544942/telco-customer-churn-analysis'
-    : '';
+  const hasGithubLink = project.id === 'telco-customer-churn';
+  const githubUrl = 'https://github.com/teja8978544942/telco-customer-churn-analysis';
+
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -74,20 +74,22 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mb-12">
              <div className="flex justify-between items-center mb-4">
                 <h2 className="text-3xl font-bold">Code Snippet</h2>
-                {hasLiveDemo && (
-                    <Button variant="outline" asChild>
-                        <Link href={liveDemoUrl} target="_blank">
-                            View Live Demo <ExternalLink className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
-                )}
-                 {project.id === 'telco-customer-churn' && (
-                    <Button variant="outline" asChild>
-                        <Link href={githubUrl} target="_blank">
-                            View on GitHub <Github className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
-                )}
+                <div className="flex gap-2">
+                    {hasLiveDemo && (
+                        <Button variant="outline" asChild>
+                            <Link href={liveDemoUrl} target="_blank">
+                                View Live Demo <ExternalLink className="ml-2 h-4 w-4" />
+                            </Link>
+                        </Button>
+                    )}
+                    {hasGithubLink && (
+                        <Button variant="outline" asChild>
+                            <Link href={githubUrl} target="_blank">
+                                View on GitHub <Github className="ml-2 h-4 w-4" />
+                            </Link>
+                        </Button>
+                    )}
+                </div>
             </div>
             <pre className="p-4 rounded-lg bg-secondary overflow-x-auto">
               <code>{project.codeSnippet}</code>
