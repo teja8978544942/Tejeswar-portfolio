@@ -1,3 +1,4 @@
+
 export type Skill = {
   name: string;
   level: number;
@@ -50,8 +51,8 @@ export const projects: Project[] = [
     title: 'Store Performance Forecast Analysis',
     description: 'Developed a forecasting model using machine learning to predict store performance, creating a Streamlit app for data visualization and stakeholder insights.',
     longDescription: 'This project involved developing a forecasting model using machine learning to predict store performance. A Streamlit application was also created to provide data visualization and insights for stakeholders, making the results accessible and actionable.',
-    imageUrl: 'https://picsum.photos/600/400',
-    imageHint: 'data chart',
+    imageUrl: 'https://picsum.photos/600/402',
+    imageHint: 'data analytics',
     tags: ['Python', 'Machine Learning', 'Streamlit', 'Forecasting'],
     codeSnippet: `import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -79,8 +80,8 @@ print("Model trained for store performance forecast.")`,
     title: 'Telco Customer Churn Analysis',
     description: 'Analyzed customer data to identify key churn drivers and built predictive models to provide actionable retention strategies.',
     longDescription: 'In this project, I analyzed customer data for a telecommunications company to identify the key factors contributing to customer churn. I then built and evaluated several predictive models to forecast churn, providing the company with actionable strategies to improve customer retention.',
-    imageUrl: 'https://picsum.photos/600/401',
-    imageHint: 'customer data',
+    imageUrl: 'https://picsum.photos/600/403',
+    imageHint: 'analytics dashboard',
     tags: ['Python', 'Pandas', 'Scikit-learn', 'Predictive Modeling'],
     codeSnippet: `import pandas as pd
 from sklearn.linear_model import LogisticRegression
