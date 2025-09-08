@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Download } from 'lucide-react';
 
 export default function ResumePage() {
+  const resumeUrl = "https://drive.google.com/file/d/1yYt_iYAwDoIWxx1L7iarm4NrGUvAECU6/view?usp=sharing";
+
   return (
     <div className="container mx-auto px-4 py-16">
       <header className="text-center mb-12">
@@ -15,19 +17,13 @@ export default function ResumePage() {
       <div className="max-w-4xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle>Download Resume</CardTitle>
-            <CardDescription>Click the button below to download the latest version of my resume in PDF format.</CardDescription>
+            <CardTitle>View & Download Resume</CardTitle>
+            <CardDescription>Click the button below to open my resume. You can view it or download it from there.</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-center gap-6">
-            <div className="p-8 border-dashed border-2 border-muted rounded-lg w-full text-center bg-secondary/50">
-              <p className="text-muted-foreground">
-                To link your resume, upload your resume PDF to the `/public` folder in your project and update the `href` in the button below. For example: `/your-resume-file.pdf`.
-              </p>
-            </div>
             <Button asChild size="lg">
-              {/* IMPORTANT: Replace this placeholder with the actual path to your resume PDF in the /public folder */}
-              <Link href="/Tejeswar_Nadisetti_Resume.pdf" download>
-                Download PDF
+              <Link href={resumeUrl} target="_blank" rel="noopener noreferrer">
+                View Resume
                 <Download className="ml-2 h-5 w-5" />
               </Link>
             </Button>
