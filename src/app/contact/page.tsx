@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Send } from 'lucide-react';
+import { Send, Mail } from 'lucide-react';
 
 const ContactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -45,6 +45,12 @@ export default function ContactPage() {
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           Have a question, a project proposal, or just want to connect? Feel free to reach out.
         </p>
+        <div className="flex justify-center items-center gap-2 mt-4 text-lg text-muted-foreground">
+            <Mail className="h-5 w-5" />
+            <a href="mailto:nadisettitejeswar@gmail.com" className="hover:text-primary">
+                nadisettitejeswar@gmail.com
+            </a>
+        </div>
       </header>
       <div className="max-w-2xl mx-auto">
         <Card>

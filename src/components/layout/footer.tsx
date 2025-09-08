@@ -17,12 +17,12 @@ export function Footer() {
           </p>
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" aria-label="GitHub">
+              <Link href="https://github.com/teja8978544942" target="_blank" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/in/nadisetti-tejeswar-58896b2b4/" target="_blank" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </Button>
