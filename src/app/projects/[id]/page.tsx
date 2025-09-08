@@ -64,10 +64,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <h2 className="text-3xl font-bold mb-6">Visual Insight</h2>
               <div className="flex justify-center">
                 <Card className="max-w-2xl">
-                  <CardHeader>
-                    <CardTitle className="text-lg">Churn by Contract Type</CardTitle>
-                  </CardHeader>
-                  <CardContent>
+                  <CardContent className="pt-6">
                     <Image src="https://i.postimg.cc/j5CLHdxG/Screenshot-2025-09-08-113559.png" alt="Chart showing customer churn by contract type" width={600} height={400} className="rounded-md" data-ai-hint="bar chart" />
                     <p className="text-sm text-muted-foreground mt-2">Customers on month-to-month contracts have a churn rate of 42.7%, significantly higher than those on yearly contracts.</p>
                   </CardContent>
