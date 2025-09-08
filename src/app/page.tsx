@@ -40,7 +40,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I'm a highly motivated and analytical undergraduate student pursuing a career in Data Analytics. I'm skilled in using Python, SQL, and data visualization tools to clean, analyze, and interpret complex datasets.
+                  As a Computer Science undergraduate with a passion for data, I am actively pursuing a career in Data Analytics. I am skilled in using Python, SQL, and data visualization tools to clean, analyze, and interpret complex datasets.
                 </p>
                 <p>
                   I am eager to apply academic knowledge and project experience to uncover actionable insights and contribute to data-driven decision-making in a professional environment. A proactive learner with a strong foundation in statistical analysis.
