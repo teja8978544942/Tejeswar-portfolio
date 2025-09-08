@@ -37,6 +37,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const hasGithubLink = Object.keys(githubLinks).includes(project.id);
   const githubUrl = githubLinks[project.id];
 
+  const loanDefaultImages = [
+    { src: 'https://i.postimg.cc/Z59h8hc2/class-distributions.png', alt: 'Class Distribution Chart', caption: 'Distribution of loan repayment status, showing a class imbalance.' },
+    { src: 'https://i.postimg.cc/TP8Bn5h5/Feature-Correlation-Heatmap.png', alt: 'Feature Correlation Heatmap', caption: 'Heatmap illustrating the correlation between different financial features.' },
+    { src: 'https://i.postimg.cc/3wm5qCzZ/FICO-Score-Distribution-by-Loan-Status.png', alt: 'FICO Score Distribution', caption: 'FICO score distribution for both defaulted and fully paid loans.' },
+    { src: 'https://i.postimg.cc/9F032jv0/Random-Forest-Feature-Importance.png', alt: 'Random Forest Feature Importance', caption: 'Chart showing the most important features for predicting loan default.' },
+    { src: 'https://i.postimg.cc/13VLgrRZ/roc-curve.png', alt: 'ROC Curve', caption: 'ROC curve demonstrating the performance of the classification model.' },
+  ];
+
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -73,6 +81,22 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     <p className="text-sm text-muted-foreground mt-2 text-center">A comprehensive dashboard visualizing key factors influencing customer churn, including contract types, tenure, and payment methods.</p>
                   </CardContent>
                 </Card>
+              </div>
+            </section>
+          )}
+
+          {project.id === 'loan-default-prediction' && (
+             <section id="visuals" className="mb-12">
+              <h2 className="text-3xl font-bold mb-6">Visual Analysis and Model Insights</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {loanDefaultImages.map((image, index) => (
+                    <Card key={index} className="overflow-hidden">
+                      <CardContent className="pt-6">
+                        <Image src={image.src} alt={image.alt} width={600} height={400} className="rounded-md w-full object-cover" data-ai-hint="data visualization" />
+                        <p className="text-sm text-muted-foreground mt-2 text-center">{image.caption}</p>
+                      </CardContent>
+                    </Card>
+                ))}
               </div>
             </section>
           )}
