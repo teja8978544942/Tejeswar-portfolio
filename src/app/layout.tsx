@@ -1,9 +1,28 @@
 import type { Metadata } from 'next';
+import { Inter, Space_Grotesk, Source_Code_Pro } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ['latin'],
+  variable: '--font-source-code-pro',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Tejeswar Nadisetti Portfolio',
@@ -16,11 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={cn('scroll-smooth', inter.variable, spaceGrotesk.variable, sourceCodePro.variable)}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&family=Source+Code+Pro&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased", process.env.NODE_ENV === "development" ? "debug-screens" : "")}>
         <div className="flex min-h-screen flex-col">
