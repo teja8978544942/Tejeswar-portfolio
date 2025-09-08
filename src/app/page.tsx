@@ -16,14 +16,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 md:py-32">
         <div className="container mx-auto px-4 text-center">
-          <Image
-            src="https://picsum.photos/128/128"
-            alt="Portrait of the analyst"
-            data-ai-hint="professional portrait"
-            width={128}
-            height={128}
-            className="rounded-full mx-auto mb-6 border-4 border-accent"
-          />
           <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
             Tejeswar Nadisetti
           </h1>
