@@ -20,7 +20,7 @@ export default function Home() {
             Tejeswar Nadisetti
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/80 mb-8">
-            A Data Analytics Portfolio. Leveraging data to uncover insights and drive business solutions.
+            Transforming data into actionable insights and strategic solutions.
           </p>
           <Button asChild size="lg">
             <Link href="/projects">
