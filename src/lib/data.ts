@@ -39,10 +39,8 @@ export const skills: Skill[] = [
   { name: 'Pandas', level: 80 },
   { name: 'Numpy', level: 75 },
   { name: 'Scikit-learn', level: 75 },
-  { name: 'Tableau', level: 90 },
   { name: 'Power BI', level: 80 },
   { name: 'Streamlit', level: 70 },
-  { name: 'AWS SageMaker', level: 60 },
 ];
 
 export const projects: Project[] = [
