@@ -61,12 +61,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
           {project.id === 'telco-customer-churn' && (
              <section id="visuals" className="mb-12">
-              <h2 className="text-3xl font-bold mb-6">Visual Insight</h2>
+              <h2 className="text-3xl font-bold mb-6">Comprehensive Customer Churn and Tenure Analysis Visualizations</h2>
               <div className="flex justify-center">
-                <Card className="max-w-2xl">
+                <Card className="w-full">
                   <CardContent className="pt-6">
-                    <Image src="https://i.postimg.cc/j5CLHdxG/Screenshot-2025-09-08-113559.png" alt="Chart showing customer churn by contract type" width={600} height={400} className="rounded-md" data-ai-hint="bar chart" />
-                    <p className="text-sm text-muted-foreground mt-2">Customers on month-to-month contracts have a churn rate of 42.7%, significantly higher than those on yearly contracts.</p>
+                    <Image src="https://i.postimg.cc/JhsqpXQq/Screenshot-2025-09-08-112459.png" alt="Dashboard showing various churn analysis charts" width={800} height={600} className="rounded-md w-full" data-ai-hint="dashboard analytics" />
+                    <p className="text-sm text-muted-foreground mt-2 text-center">A comprehensive dashboard visualizing key factors influencing customer churn, including contract types, tenure, and payment methods.</p>
                   </CardContent>
                 </Card>
               </div>
