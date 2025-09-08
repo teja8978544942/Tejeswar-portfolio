@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects } from '@/lib/data';
@@ -43,14 +42,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </Badge>
             ))}
           </div>
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            data-ai-hint={project.imageHint}
-            width={1200}
-            height={600}
-            className="rounded-lg shadow-lg mb-8 aspect-video object-cover"
-          />
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p className="text-xl leading-relaxed">{project.longDescription}</p>
           </div>

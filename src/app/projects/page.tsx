@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/lib/data';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,14 +17,6 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <Card key={project.id} className="flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <CardHeader>
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                data-ai-hint={project.imageHint}
-                width={600}
-                height={400}
-                className="rounded-t-lg aspect-[3/2] object-cover"
-              />
               <CardTitle className="pt-4">{project.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (

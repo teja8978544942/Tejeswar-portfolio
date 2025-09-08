@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { skills, resume, education } from '@/lib/data';
 import SkillsChart from '@/components/skills-chart';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,17 +15,7 @@ export default function AboutPage() {
 
       {/* Detailed About Me */}
       <section className="mb-16">
-        <div className="grid md:grid-cols-5 gap-12 items-center">
-          <div className="md:col-span-2">
-            <Image
-              src="https://picsum.photos/500/600"
-              alt="Portrait of Tejeswar Nadisetti"
-              data-ai-hint="professional portrait"
-              width={500}
-              height={600}
-              className="rounded-lg shadow-2xl object-cover aspect-[4/5]"
-            />
-          </div>
+        <div className="grid md:grid-cols-1 gap-12 items-center">
           <div className="md:col-span-3">
             <h2 className="text-3xl font-bold mb-6">Who I Am</h2>
             <div className="space-y-4 text-muted-foreground text-lg">

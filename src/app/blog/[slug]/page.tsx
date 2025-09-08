@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/data';
@@ -40,14 +39,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               By {post.author} on {new Date(post.date).toLocaleDateString()}
             </p>
           </header>
-          <Image
-            src={post.imageUrl}
-            alt={post.title}
-            data-ai-hint={post.imageHint}
-            width={1200}
-            height={600}
-            className="rounded-lg shadow-lg mb-8 aspect-video object-cover"
-          />
           <div className="prose prose-lg max-w-none text-muted-foreground whitespace-pre-line">
             {post.content}
           </div>

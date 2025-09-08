@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { blogPosts } from '@/lib/data';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -16,16 +15,6 @@ export default function BlogPage() {
         {blogPosts.map((post) => (
           <Link href={`/blog/${post.slug}`} key={post.slug} className="block group">
             <Card className="flex flex-col md:flex-row overflow-hidden h-full hover:shadow-xl transition-shadow duration-300">
-              <div className="md:w-1/3">
-                <Image
-                  src={post.imageUrl}
-                  alt={post.title}
-                  data-ai-hint={post.imageHint}
-                  width={400}
-                  height={400}
-                  className="object-cover h-full w-full"
-                />
-              </div>
               <div className="md:w-2/3 flex flex-col">
                 <CardHeader>
                   <CardTitle className="group-hover:text-primary transition-colors">{post.title}</CardTitle>

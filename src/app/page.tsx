@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -33,7 +32,7 @@ export default function Home() {
       {/* About Me Snippet */}
       <section id="about" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-1 gap-8 items-center">
             <div className="md:col-span-2">
               <h2 className="text-3xl font-bold mb-4">About Me</h2>
               <div className="space-y-4 text-muted-foreground">
@@ -49,16 +48,6 @@ export default function Home() {
                   Learn More About My Journey <ArrowRight className="ml-2" />
                 </Link>
               </Button>
-            </div>
-            <div className="hidden md:block">
-              <Image
-                src="https://picsum.photos/400/500"
-                alt="Working on a laptop"
-                data-ai-hint="workspace laptop"
-                width={400}
-                height={500}
-                className="rounded-lg shadow-lg"
-              />
             </div>
           </div>
         </div>
@@ -94,14 +83,6 @@ export default function Home() {
             {featuredProjects.map((project) => (
               <Card key={project.id} className="flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
-                  <Image
-                    src={project.imageUrl}
-                    alt={project.title}
-                    data-ai-hint={project.imageHint}
-                    width={600}
-                    height={400}
-                    className="rounded-t-lg aspect-[3/2] object-cover"
-                  />
                   <CardTitle className="pt-4">{project.title}</CardTitle>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (
