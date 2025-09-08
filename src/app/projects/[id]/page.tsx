@@ -77,7 +77,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     <CardTitle className="text-lg">Tenure Distribution by Churn Status</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Image src="https://i.imgur.com/8pS1h7H.png" alt="Box plot showing tenure distribution by churn status" width={600} height={401} className="rounded-md" data-ai-hint="box plot" />
+                    <Image src="https://i.postimg.cc/h45GBBDG/Screenshot-2025-09-08-112459.png" alt="Box plot showing tenure distribution by churn status" width={600} height={401} className="rounded-md" data-ai-hint="box plot" />
                     <p className="text-sm text-muted-foreground mt-2">The analysis shows a clear trend: customers who churn typically have a much shorter tenure with the company.</p>
                   </CardContent>
                 </Card>
