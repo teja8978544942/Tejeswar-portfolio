@@ -30,7 +30,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const liveDemoUrl = project.id === 'store-performance-forecast' 
     ? 'https://teja8978544942-store-site-app-kumlnu.streamlit.app/' 
     : project.id === 'telco-customer-churn' 
-    ? '#-your-live-demo-link-here' // Placeholder for when Telco demo is ready
+    ? 'https://teja8978544942-telco-churn-app-frpeqs.streamlit.app/'
     : '';
 
 
